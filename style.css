@@ -1,0 +1,934 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body{
+    margin: auto;
+}
+
+header{
+    position: fixed;
+    top: 0%;
+    width: 100%; 
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.637);
+}
+
+h2{
+    width: 100%;
+    text-align: center;
+}
+
+
+.copy-the-body-tag{
+    width: 100%;
+    background-color: rgba(29, 23, 23, 0.466);
+}
+.hold-everything{
+    max-width: 1800px;
+}
+.hold-something {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+nav{
+    padding-top: 10px;
+    width: 80%;
+    height: 70px;
+   margin: auto;
+   color: rgb(203, 202, 202);
+   backdrop-filter: blur(2px);
+}
+  
+
+
+.side-bar{
+    display: none ; 
+    height: 100vh; 
+}
+
+header > nav > ul {
+    margin: auto;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1000;
+}
+
+hr{
+    height: 2px;
+    border: 0;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.712), rgb(53, 52, 52),rgb(233, 231, 231));
+}
+
+.logo{
+font-size: 7rem;
+margin: auto;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-family: fantasy;
+}
+
+li{
+    padding: 15px;
+    font-size: 1.2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.first{
+    border: 2px solid rgba(7, 230, 74, 0.811);
+    border-radius: 50px;
+}
+
+.last{
+    border-radius: 50px;
+    background-color: white;
+    color: black;
+}
+
+li:hover{
+    cursor: pointer;
+    border-radius: 50px;
+   border: 2px solid rgba(7, 230, 74, 0.811);
+}
+
+.menu-button{
+    display: none;
+}
+
+
+.on-point{
+    border-bottom:2px solid pink;
+}
+
+
+.last:hover{
+    border-radius: 50px;
+    border: 2px solid rgba(7, 230, 74, 0.811);
+    background-color: rgba(255, 255, 255, 0.63);
+    color: black;
+}
+
+
+.first:hover{
+    border: 2px solid rgba(7, 230, 74, 0.811);
+    border-radius: 50px;
+    background-color: white;
+    color: black;
+}
+
+
+main{
+    max-width: 100%;
+    margin: auto;
+    width: 100%;
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.712), rgb(0, 0, 0));
+    height: 800px;
+    padding-top: 150px;
+}
+
+.spliter{
+    width: 100%;
+    display: grid;
+    margin: auto;
+    grid-template-columns: .5fr .8fr .5fr;
+    position: relative;
+    top: 90px;
+}
+
+.theimage{
+    width: 100%;
+
+}
+
+#carouselImage{
+    width: 100%;
+    border-radius: 100px;
+}
+
+.the-text{
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}       
+footer {
+    text-align: center;
+    padding: 0px 0;
+    background-color: #141212;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .col-md-4 {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+
+.thecarouselholder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;border-radius: 80px;
+    max-width: 600px;
+    height: 50vh;
+} 
+
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-box {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden; /* Ensures image corners follow the border-radius */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.carousel-box img {
+    width: 100%; /* Image fills the container */
+    height: 100%;
+    border-radius: inherit; /* Image corners follow container */
+    object-fit: cover; /* Keep image proportionate */
+}
+/* From Uiverse.io by ShrinilDhorda */ 
+.btn {
+    position: relative;
+    left: 43%;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    transform: translateY(130px);
+    border: none;
+    outline: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: rgb(14, 14, 26);
+    color: rgb(234, 234, 234);
+    font-weight: 700;
+    transition: 0.6s;
+    box-shadow: 0px 0px 60px #1f4c65;
+    -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+  }
+  .btn:active {
+    scale: 0.92;
+  }
+  .btn:hover {
+    background: rgb(2,29,78);
+    background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
+    color: rgb(4, 4, 38);
+  }
+
+  .small-screen-btn {
+    display: none;
+  }
+.fade-out {
+    opacity: 0; /* Fades out the box */
+    transform: scale(1.2); /* Scale up a little */
+    transition: .7s;
+}
+.fade-in {
+    opacity: 0.7s; /* Fades in the box */
+    transform: scale(0.95); /* Slightly smaller scale for a softer effect */
+    transition: opacity 1s ease-in-out, transform 1.7s ease-in-out; /* Separate transitions for opacity and transform */
+}
+.fade-in-active {
+    opacity: 0.7s; /* Fully visible */
+    transform: scale(1); /* Return to original size */
+    transition: 1s;
+}
+
+/** the styling for the tag below the jumbotron **/
+.diff{ 
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.712), rgb(0, 0, 0));
+}
+.dif{
+    display: none;
+    border-radius: 30px;
+    width: 80%;
+    margin: auto;display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    backdrop-filter: blur(2px);
+    scroll-behavior: smooth;
+}
+.dif > .hold{
+    height: 100%;
+}
+.dif > .hold > img{
+    width: 100%;
+}
+
+
+/** the main div part two **/
+
+.two{
+    display: none;
+    height: 100%;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    margin: auto;
+}
+.two > .the-photo-list-holder{
+    width: 80%;
+}
+
+/** the styling applies to both the gallery and the little image in the home screen namely the diff and two tags **/
+.the-photo-list-holder{
+    border-radius: 30px;
+    width: 80%;
+    height: 70%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding-top: 90px;
+    backdrop-filter: blur(2px);
+    scroll-behavior: smooth;      
+}
+.hold{
+    width: 30%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+}
+.hold:hover{
+    border: 2px solid rgb(255, 255, 255);
+}
+.the-photo-list-holder > .hold> img{
+    width: 100%;
+    border-radius: 40px;
+    transition: .5s;
+    z-index: 10;
+}
+.the-photo-list-holder >.hold > img:hover{
+    width: 110%;
+}
+
+
+/** styling for the shop page**/
+
+
+.three{
+    display: none;
+    height: auto;
+}
+
+
+.the-photo-list-holder {
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Product Grid Styling */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Product-Deal Group Styling */
+.product-deal-group {
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(33.33% - 20px);
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-deal-group:hover {
+    transform: translateY(-5px);
+}
+
+/* Individual Product Styling */
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.product-image {
+    width: 70%;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.product-image img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+}
+
+.product-info {
+    text-align: center;
+}
+
+.product-info h3 {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 1em;
+    color: #333;
+}
+
+.old-price {
+    text-decoration: line-through;
+    font-size: 0.85em;
+    color: #888;
+}
+
+.stock {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Deal Item Styling */
+.deal-item {
+    background-color: #f8f9fa;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.deal-item:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/** styling for the about us page **/
+.fourth{
+    display: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    height: auto;
+} 
+
+
+.fourth > .the-photo-list-holder{
+    width: 80%;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+/** styling for the contact page **/
+
+.fifth{
+    display: none;
+    height: auto;
+    padding-bottom: 30px;
+}
+
+
+.fifth > .the-photo-list-holder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: #ececec;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+label {
+    margin-top: 10px;
+    color: #ececec;
+}
+input, textarea {
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: black;
+}
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #e8491d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #d73c15;
+}
+.contact-info {
+    margin-top: 20px;
+}
+.contact-info p {
+    line-height: 1.6;
+    color: #000000;
+}
+
+p {
+    line-height: 1.6;
+    color: #dfdfdf;
+    font-size: 1.1rem;
+}
+footer > .container > .row > .col-md-4 > p{
+   color:#929292;
+}
+
+strong{
+    color: rgb(201, 46, 46);
+}
+.highlight {
+    color: #ffffff;
+}
+
+/** the poppins fonts **/
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+
+@media (max-width: 1100px) {
+
+    /** styling for the home page **/
+    
+
+    
+main{
+    height: 900px;
+    margin: auto;
+}
+
+.logo{
+    font-size: 6.2rem;
+}
+
+    .spliter{
+        width: 70%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        top: 0px;
+        max-height: 60vh;
+    }
+
+
+    .text{
+        max-height: 300px;
+    }
+
+    .thecarouselholder{
+        max-width: 500px;
+        display: grid;
+        height: 500px;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .nav-button{
+        display: none;
+    }
+    
+    .small-screen-btn{
+        display: block;
+        position: relative;
+        left: 0px;
+        bottom: 120px;
+    }
+}
+
+@media (max-width:900px){
+    
+.logo{
+    font-size: 5.8rem;
+}
+}
+
+
+
+@media (max-width:800px){
+    
+    .logo{
+        font-size: 5.4rem;
+    }
+}
+
+
+@media (max-width: 750px){
+
+     
+    nav{
+        height: 50px;
+    }
+
+    nav > ul{
+        position: relative;
+        right: -50%;
+        margin: 0;
+    }
+    .long-screen{
+        display: none;
+    }
+    .menu-button{
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+    
+
+    .menu-button > hr{
+    height: 3px;
+    width: 20px;
+    border: none;
+    background-color: orange;
+    }
+
+    .logo{
+        font-size: 4.8rem;
+
+    }
+
+.product-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.product-deal-group{
+    width: 100%;
+}
+
+
+/* For WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 12px;               /* Width of the scrollbar */
+}
+
+/* Track (background of the scrollbar) */
+::-webkit-scrollbar-track {
+    background: #f1f1f100;        /* Light gray background */
+    border-radius: 10px;
+}
+
+/* Handle (scrollbar thumb) */
+::-webkit-scrollbar-thumb {
+    background-color: #88888800;     /* Darker gray thumb */
+    border-radius: 10px;        /* Rounded corners */
+    border: 3px solid #f1f1f100;  /* Padding around thumb */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #55555502;     /* Darker gray when hovered */
+}
+
+/* Firefox Scrollbar */
+html {
+    scrollbar-width: thin;       /* Makes scrollbar thinner */
+    scrollbar-color: #88888807 #f1f1f105; /* Thumb and track color */
+}
+
+.fifth > .the-photo-list-holder > p{
+    width: 90%;
+}
+
+
+.side-bar{
+     display: flex;
+     z-index: 99;
+     padding-left: 10%;
+    height: 100vh;
+     width: 100%;
+     left: 0;
+     position: absolute;
+     backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.637);
+    transition: left 1s ease-in-out; /* Smooth transition */
+}
+
+.move-out{
+
+    transition: 0.5s ease-in-out;
+    left:-120%;
+}
+
+
+.side-bar > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.side-bar > ul > li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.move-in{
+    left: 120%;
+    transition: 0.5 ease-in-out;
+}
+
+}
+
+
+@media (max-width:700px){
+    
+    .logo{
+        font-size: 4.3rem;
+
+    }
+
+    main{
+        height: 900px;
+    }
+}
+
+@media (max-width: 600px){
+   
+ /* the style for the page under the jumbotron */
+ main{
+    height: 800px;
+ }
+
+ .logo{
+    font-size: 3.8rem;
+}
+
+
+.the-text{
+    font-size: .9rem;
+    letter-spacing: 1px;
+}
+
+ .dif{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+ }
+    .hold{
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .row{
+        flex-direction: column;
+    }
+
+    .col-md-4 > p{
+        font-size: 1rem;
+    }
+
+    /* styling the gallery page */
+
+    .two > .the-photo-list-holder{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+
+}
+
+@media (max-width:535px){
+    
+ .logo{
+    font-size: 3.5rem;
+}
+ #carouselImage{
+    border-radius: 50px;
+ }
+
+}
+
+@media (max-width:500px){
+
+    main{
+        height: 700px;
+        padding-top: 90px;
+    }
+
+    .logo{
+        font-size: 3.3rem;
+    }
+
+    .the-text{
+        font-size: .7rem;
+        letter-spacing: .8px;
+    }
+
+    .thecarouselholder{
+        width: 250px;
+        height: 300px;
+    }
+     
+    .small-screen-btn{
+        font-size: 10px;height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .spliter{
+        width: 90%;
+    }
+    
+    .col-md-4 > p{
+        font-size: .7rem;
+    }
+
+    .two > .the-photo-list-holder > .hold > img{
+        border-radius: 20px;
+    }
+    
+
+    
+    .fifth > .the-photo-list-holder {
+        flex-direction: row ;
+        height: 76vh;
+        margin-bottom: 60px;
+        padding-bottom: 40px;
+    }
+
+    .fifth > .the-photo-list-holder > form{
+        width: 90%;
+        margin: auto;
+    }
+
+
+}
+
+@media (max-width: 450px){
+    main{
+        height: 600px;
+    }
+
+    .product-grid{
+        grid-template-columns: 1fr;
+    }
+    
+    .logo{
+        font-size: 2.8rem;
+
+    }
+
+    .text{
+        font-size: .1rem;
+    }
+
+    .fifth > .the-photo-list-holder {
+        padding-top: 20px;
+    }
+    
+}
+
+@media (max-width: 400px){
+    .logo{
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 350px){
+    .thecarouselholder{
+        height: 250px;
+    }
+
+    
+    .col-md-4 > p{
+        font-size: .6rem;
+    }
+    
+    .logo{
+        font-size: 1.7rem;
+
+    }
+}
+
+
+@media (max-width: 260px){
+    main{
+        height: 650px;
+    }
+
+    .thecarouselholder{
+        height: 200px;
+    }
+
+    
+    .logo{
+        font-size: 1.4rem;
+
+    }
+
+}
