@@ -50,35 +50,6 @@
       </div>
         <button id="next" class="nav-button btn">Next Slide</button>
   </main>
-    <hr>
-    <main class="diff" id="diff">
-      <div class="dif" id="dif">
-        <div class="hold">
-          <img src="./mian images/m1.jpeg" alt="">
-        </div>
-        <div class="hold">
-          <img src=".//mian images/m3.jpeg" alt="">
-        </div>
-        <div class="hold">
-          <img src="./mian images/m2.jpeg" alt="">
-        </div>
-        <div class="hold">
-          <img src="./mian images/m6.jpeg" alt="">
-        </div>
-        <div class="hold">
-          <img src="./mian images/m4.jpeg" alt="">
-        </div>
-        <div class="hold">
-          <img src="./mian images/m5.jpeg" alt="">
-        </div>
-        <div class="hold">
-          <img src="./mian images/m7.jpeg" alt="">
-        </div>
-        <div class="hold">
-          <img src="./mian images/m9.jpeg" alt="">
-        </div>
-      </div>
-    </main>
     <main  id="galleryContent" class="two">
       <h2 style="    font-size: 48px; /* Adjust the size as needed */
       background: linear-gradient(to right, rgb(42, 39, 39) 50%, rgb(21, 21, 21) 50%);
@@ -516,148 +487,13 @@ document.getElementById('fought').addEventListener('click', () => {
     const aboutContent = document.getElementById("aboutContent")
     const shopContent = document.getElementById("shopContent")
     const contactContent = document.getElementById("contactContent")
-    const difContent = document.getElementById("diff");
     const shopButton = document.getElementById("shop");
     const aboutButton = document.getElementById("about");
     const contactButton = document.getElementById("last");
 
     // Function to handle the display logic
-// function handleContentDisplay(activeContent) {
-//     const contentsPortrait = [mainContent, galleryContent, difContent, contactContent, shopContent, aboutContent];
-//     const buttonsPortrait = [homeButton, galleryButton, shopButton, aboutButton, contactButton];
-
-//     // Hide all content and remove 'on-point' class from all buttons
-//     contentsPortrait.forEach(content => content.style.display = "none");
-//     buttonsPortrait.forEach(button => button.classList.remove("on-point"));
-
-//     // Show the active content and add 'on-point' class to the corresponding button
-//     activeContent.style.display = "block";
-//     const activeButton = buttonsPortrait.find(button => button.classList.contains(activeContent.className));
-//     if (activeButton) {
-//         activeButton.classList.add("on-point");
-//     }
-// }
-
-// // Event listeners for buttons
-// homeBtn.addEventListener("click", function() {
-//     handleContentDisplay(mainContent, difContent);
-// });
-
-// galleryBtn.addEventListener("click", function() {
-//     handleContentDisplay(galleryContent);
-// });
-
-// shopBtn.addEventListener("click", function() {
-//     handleContentDisplay(shopContent);
-// });
-
-// aboutBtn.addEventListener("click", function() {
-//     handleContentDisplay(aboutContent);
-// });
-
-// lastBtn.addEventListener("click", function() {
-//     handleContentDisplay(contactContent);
-// });
-
-// function handleContentDisplay(...activeContents) {
-//     const contentsPortrait = [mainContent, galleryContent, difContent, contactContent, shopContent, aboutContent];
-//     const buttonsPortrait = [homeButton, galleryButton, shopButton, aboutButton, contactButton];
-
-//     // Hide all content and remove 'on-point' class from all buttons
-//     contentsPortrait.forEach(content => content.style.display = "none");
-//     buttonsPortrait.forEach(button => button.classList.remove("on-point"));
-
-//     // Show the active contents and add 'on-point' class to the corresponding button(s)
-//     activeContents.forEach(activeContent => {
-//         activeContent.style.display = "block";
-//         const activeButton = buttonsPortrait.find(button => button.classList.contains(activeContent.className));
-//         if (activeButton) {
-//             activeButton.classList.add("on-point");
-//         }
-//     });
-// }
-// // Home button should display both mainContent and difContent
-// homeBtn.addEventListener("click", function() {
-//     handleContentDisplay(mainContent, difContent);
-// });
-
-// // Other buttons display only their respective content
-// galleryBtn.addEventListener("click", function() {
-//     handleContentDisplay(galleryContent);
-// });
-
-// shopBtn.addEventListener("click", function() {
-//     handleContentDisplay(shopContent);
-// });
-
-// aboutBtn.addEventListener("click", function() {
-//     handleContentDisplay(aboutContent);
-// });
-
-// lastBtn.addEventListener("click", function() {
-//     handleContentDisplay(contactContent);
-// });
-
-
-    /** The short screen navbar  **/
-// Function to show content and highlight buttons
-// function showContent(activeContent, activeButton) {
-//     // Define all content elements
-//     const contents = [
-//         mainContent,
-//         galleryContent,
-//         difContent,
-//         contactContent,
-//         shopContent,
-//         aboutContent
-//     ];
-
-//     // Hide all contents
-//     contents.forEach(content => content.style.display = "none");
-
-//     // Show the active content
-//     activeContent.style.display = "block";
-
-//     // Define all button elements
-//     const buttons = [
-//         homeButton,
-//         galleryButton,
-//         shopButton,
-//         aboutButton,
-//         contactButton
-//     ];
-
-
-//     // Remove 'on-point' class from all buttons
-//     buttons.forEach(button => button.classList.remove("on-point"));
-
-//     // Add 'on-point' class to the active button
-//     activeButton.classList.add("on-point");
-    
-// }
-
-// // Event listeners
-// homeButton.addEventListener("click", () => {
-//     showContent(mainContent, homeButton);
-// });
-
-// galleryButton.addEventListener("click", () => {
-//     showContent(galleryContent, galleryButton);
-// });
-
-// shopButton.addEventListener("click", () => {
-//     showContent(shopContent, shopButton);
-// });
-
-// aboutButton.addEventListener("click", () => {
-//     showContent(aboutContent, aboutButton);
-// });
-
-// contactButton.addEventListener("click", () => {
-//     showContent(contactContent, contactButton);
-// });
 function handleContentDisplay(...activeContents) {
-    const contentsPortrait = [mainContent, galleryContent, difContent, contactContent, shopContent, aboutContent];
+    const contentsPortrait = [mainContent, galleryContent, contactContent, shopContent, aboutContent];
     
     // Buttons for two different sets (btn and Button)
     const buttonsPortrait = [homeButton, galleryButton, shopButton, aboutButton, contactButton];
@@ -686,7 +522,7 @@ function handleContentDisplay(...activeContents) {
 
 // Event listeners for Button set
 homeButton.addEventListener("click", function() {
-    handleContentDisplay(mainContent, difContent); // Home button displays two contents
+    handleContentDisplay(mainContent); // Home button displays two contents
 });
 
 galleryButton.addEventListener("click", function() {
@@ -707,7 +543,7 @@ contactButton.addEventListener("click", function() {
 
 // Event listeners for Btn set (remains unchanged)
 homeBtn.addEventListener("click", function() {
-    handleContentDisplay(mainContent, difContent);
+    handleContentDisplay(mainContent);
 });
 
 galleryBtn.addEventListener("click", function() {
