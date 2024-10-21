@@ -442,7 +442,11 @@
   </div>
 </div>
       <script>
-        const carouselImage = document.getElementById('carouselImage');
+
+document.addEventListener("DOMContentLoaded", function() {
+
+
+  const carouselImage = document.getElementById('carouselImage');
 
 // Array of image paths from the local "images" directory
 const slides = [
@@ -498,7 +502,8 @@ document.getElementById('fought').addEventListener('click', () => {
     changeSlide('prev');
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+
+// getting the buttons and adding functionality 
   const homeBtn = document.getElementById("homeBtn");
   const galleryBtn = document.getElementById("galleryBtn");
   const shopBtn = document.getElementById("shopBtn");
