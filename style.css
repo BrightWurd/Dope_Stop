@@ -834,10 +834,11 @@ html {
         width: 100%;
     }
     
-    .two > .the-photo-list-holder > .hold{
-        width: 110%;
-    }
     
+    .two > .the-photo-list-holder > .hold > img:hover{
+        border-radius: 20px;
+        width: 150%;
+    }
 
     
     .fifth > .the-photo-list-holder {
