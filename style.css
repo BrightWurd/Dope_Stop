@@ -831,6 +831,11 @@ html {
 
     .two > .the-photo-list-holder > .hold > img{
         border-radius: 20px;
+        width: 100%;
+    }
+    
+    .two > .the-photo-list-holder > .hold{
+        width: 110%;
     }
     
 
