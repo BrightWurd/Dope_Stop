@@ -315,6 +315,16 @@ footer {
     width: 80%;
 }
 
+.two > .the-photo-list-holder > .hold{
+    box-shadow: 1px 1px 10px 3px white;
+}
+
+
+.two > .the-photo-list-holder > .hold:hover{
+
+    border: 2px solid rgb(255, 255, 255);
+}
+
 /** the styling applies to both the gallery and the little image in the home screen namely the diff and two tags **/
 .the-photo-list-holder{
     border-radius: 30px;
@@ -337,9 +347,6 @@ footer {
     justify-content: center;
     align-items: center;
     border-radius: 40px;
-}
-.hold:hover{
-    border: 2px solid rgb(255, 255, 255);
 }
 .the-photo-list-holder > .hold> img{
     width: 100%;
