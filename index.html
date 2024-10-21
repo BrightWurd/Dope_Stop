@@ -442,6 +442,62 @@
   </div>
 </div>
       <script>
+        const carouselImage = document.getElementById('carouselImage');
+
+// Array of image paths from the local "images" directory
+const slides = [
+    "images/sneaker0.jpg",
+    "images/sneaker1.jpeg",
+    "images/sneaker3.jpg",
+    "images/sneaker5.jpg",
+    "images/sneaker6.jpeg",
+    "images/sneaker7.jpeg"
+];
+
+let index = 0;
+
+// Function to change the slide content with fade and scale animation
+function changeSlide(direction) {
+    // Step 1: Add the fade-out class to trigger animation
+    carouselImage.classList.add('fade-out');
+
+    // Step 2: Wait for the fade-out animation to complete
+    setTimeout(() => {
+        // Update the index based on the direction
+        if (direction === 'next') {
+            index = (index + 1) % slides.length; // Move to the next slide, loop back if at the end
+        } else if (direction === 'prev') {
+            index = (index - 1 + slides.length) % slides.length; // Move to the previous slide, loop back if at the beginning
+        }
+
+        // Step 3: Update the image src of the carousel
+       
+
+        // Step 4: After changing the image, remove the fade-out class
+        // and add the fade-in class to trigger the fade-in animation
+        setTimeout(() => {
+            carouselImage.classList.remove('fade-out');
+            carouselImage.src = slides[index];
+            carouselImage.classList.add('fade-in');
+        }, 300); // A small timeout to allow the fade-out to complete
+
+    }, 600); // This duration should match the CSS transition duration for the fade-out effect
+
+    // Step 5: Remove the fade-in class after the animation completes to allow for the next cycle
+    setTimeout(() => {
+        carouselImage.classList.remove('fade-in');
+    }, 300); // This duration should match the total time for fade-in
+}
+
+// Event listeners for buttons
+document.getElementById('next').addEventListener('click', () => {
+    changeSlide('next');
+});
+
+document.getElementById('fought').addEventListener('click', () => {
+    changeSlide('prev');
+});
+
 document.addEventListener("DOMContentLoaded", function() {
   const homeBtn = document.getElementById("homeBtn");
   const galleryBtn = document.getElementById("galleryBtn");
@@ -461,157 +517,60 @@ document.addEventListener("DOMContentLoaded", function() {
     const contactButton = document.getElementById("last");
 
     /** The short screen navbar  **/
+// Function to show content and highlight buttons
+function showContent(activeContent, activeButton) {
+    // Define all content elements
+    const contents = [
+        mainContent,
+        galleryContent,
+        difContent,
+        contactContent,
+        shopContent,
+        aboutContent
+    ];
 
-    
-    homeBtn.addEventListener("click", function() {
-        mainContent.style.display = "block";
-        galleryContent.style.display = "none";
-        difContent.style.display = "block";
-        contactContent.style.display = "none"
-        shopContent.style.display = "none";
-        aboutContent.style.display = "none"
-  shopButton.classList.remove("on-point");
-  aboutButton.classList.remove("on-point");
-  contactButton.classList.remove("on-point");
-  homeButton.classList.add("on-point");
-  galleryButton.classList.remove("on-point");
-    });
+    // Hide all contents
+    contents.forEach(content => content.style.display = "none");
 
-    galleryBtn.addEventListener("click", function() {
-        mainContent.style.display = "none";
-        galleryContent.style.display = "block";
-        difContent.style.display="none";
-        contactContent.style.display = "none"
-        aboutContent.style.display = "none";
-        shopContent.style.display = "none";
-          shopButton.classList.remove("on-point");
-  aboutButton.classList.remove("on-point");
-  contactButton.classList.remove("on-point");
-  homeButton.classList.remove("on-point");
-  galleryButton.classList.add("on-point");
-    });
+    // Show the active content
+    activeContent.style.display = "block";
 
-    shopBtn.addEventListener("click", function(){
-  mainContent.style.display = "none";
-        galleryContent.style.display = "none";
-        contactContent.style.display = "none"
-        difContent.style.display = "none";
-        aboutContent.style.display = "none"
-        shopContent.style.display = "block"
-  shopButton.classList.add("on-point");
-  aboutButton.classList.remove("on-point");
-  contactButton.classList.remove("on-point");
-  homeButton.classList.remove("on-point");
-  galleryButton.classList.remove("on-point");
+    // Define all button elements
+    const buttons = [
+        homeButton,
+        galleryButton,
+        shopButton,
+        aboutButton,
+        contactButton
+    ];
+
+    // Remove 'on-point' class from all buttons
+    buttons.forEach(button => button.classList.remove("on-point"));
+
+    // Add 'on-point' class to the active button
+    activeButton.classList.add("on-point");
+}
+
+// Event listeners
+homeButton.addEventListener("click", () => {
+    showContent(mainContent, homeButton);
 });
 
-aboutBtn.addEventListener("click", function() {
-  mainContent.style.display = "none";
-        galleryContent.style.display = "none";
-        contactContent.style.display = "none"
-        difContent.style.display = "none";
-        shopContent.style.display = "none"
-        aboutContent.style.display = "block"
-  shopButton.classList.remove("on-point");
-  aboutButton.classList.add("on-point");
-  contactButton.classList.remove("on-point");
-  homeButton.classList.remove("on-point");
-  galleryButton.classList.remove("on-point");
+galleryButton.addEventListener("click", () => {
+    showContent(galleryContent, galleryButton);
 });
 
-
-lastBtn.addEventListener("click", function() {
-  mainContent.style.display = "none";
-        galleryContent.style.display = "none";
-        difContent.style.display = "none";
-        shopContent.style.display = "none"
-        aboutContent.style.display = "none"
-        contactContent.style.display = "block"
-  shopButton.classList.remove("on-point");
-  aboutButton.classList.remove("on-point");
-  contactButton.classList.add("on-point");
-  homeButton.classList.remove("on-point");
-  galleryButton.classList.remove("on-point");
+shopButton.addEventListener("click", () => {
+    showContent(shopContent, shopButton);
 });
 
-
-
-
-/*** The full Screen nav bar **/
-    homeButton.addEventListener("click", function() {
-        mainContent.style.display = "block";
-        galleryContent.style.display = "none";
-        difContent.style.display = "block";
-        contactContent.style.display = "none"
-        shopContent.style.display = "none";
-        aboutContent.style.display = "none"
-  shopButton.classList.remove("on-point");
-  aboutButton.classList.remove("on-point");
-  contactButton.classList.remove("on-point");
-  homeButton.classList.add("on-point");
-  galleryButton.classList.remove("on-point");
-    });
-
-    galleryButton.addEventListener("click", function() {
-        mainContent.style.display = "none";
-        galleryContent.style.display = "block";
-        difContent.style.display="none";
-        contactContent.style.display = "none"
-        aboutContent.style.display = "none";
-        shopContent.style.display = "none";
-          shopButton.classList.remove("on-point");
-  aboutButton.classList.remove("on-point");
-  contactButton.classList.remove("on-point");
-  homeButton.classList.remove("on-point");
-  galleryButton.classList.add("on-point");
-    });
-
-
-    // Set 1: Highlight shopButton
-shopButton.addEventListener("click", function(){
-  mainContent.style.display = "none";
-        galleryContent.style.display = "none";
-        contactContent.style.display = "none"
-        difContent.style.display = "none";
-        aboutContent.style.display = "none"
-        shopContent.style.display = "block"
-  shopButton.classList.add("on-point");
-  aboutButton.classList.remove("on-point");
-  contactButton.classList.remove("on-point");
-  homeButton.classList.remove("on-point");
-  galleryButton.classList.remove("on-point");
+aboutButton.addEventListener("click", () => {
+    showContent(aboutContent, aboutButton);
 });
 
-// Set 2: Highlight aboutButton
-aboutButton.addEventListener("click", function() {
-  mainContent.style.display = "none";
-        galleryContent.style.display = "none";
-        contactContent.style.display = "none"
-        difContent.style.display = "none";
-        shopContent.style.display = "none"
-        aboutContent.style.display = "block"
-  shopButton.classList.remove("on-point");
-  aboutButton.classList.add("on-point");
-  contactButton.classList.remove("on-point");
-  homeButton.classList.remove("on-point");
-  galleryButton.classList.remove("on-point");
+contactButton.addEventListener("click", () => {
+    showContent(contactContent, contactButton);
 });
-
-// Set 3: Highlight contactButton
-contactButton.addEventListener("click", function() {
-  mainContent.style.display = "none";
-        galleryContent.style.display = "none";
-        difContent.style.display = "none";
-        shopContent.style.display = "none"
-        aboutContent.style.display = "none"
-        contactContent.style.display = "block"
-  shopButton.classList.remove("on-point");
-  aboutButton.classList.remove("on-point");
-  contactButton.classList.add("on-point");
-  homeButton.classList.remove("on-point");
-  galleryButton.classList.remove("on-point");
-});
-
 
 const button = document.getElementById('menu-button');
         const element = document.getElementById('actionElement');
