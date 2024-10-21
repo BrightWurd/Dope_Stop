@@ -522,7 +522,44 @@ document.getElementById('fought').addEventListener('click', () => {
     const contactButton = document.getElementById("last");
 
     // Function to handle the display logic
-function handleContentDisplay(activeContent) {
+// function handleContentDisplay(activeContent) {
+//     const contentsPortrait = [mainContent, galleryContent, difContent, contactContent, shopContent, aboutContent];
+//     const buttonsPortrait = [homeButton, galleryButton, shopButton, aboutButton, contactButton];
+
+//     // Hide all content and remove 'on-point' class from all buttons
+//     contentsPortrait.forEach(content => content.style.display = "none");
+//     buttonsPortrait.forEach(button => button.classList.remove("on-point"));
+
+//     // Show the active content and add 'on-point' class to the corresponding button
+//     activeContent.style.display = "block";
+//     const activeButton = buttonsPortrait.find(button => button.classList.contains(activeContent.className));
+//     if (activeButton) {
+//         activeButton.classList.add("on-point");
+//     }
+// }
+
+// // Event listeners for buttons
+// homeBtn.addEventListener("click", function() {
+//     handleContentDisplay(mainContent, difContent);
+// });
+
+// galleryBtn.addEventListener("click", function() {
+//     handleContentDisplay(galleryContent);
+// });
+
+// shopBtn.addEventListener("click", function() {
+//     handleContentDisplay(shopContent);
+// });
+
+// aboutBtn.addEventListener("click", function() {
+//     handleContentDisplay(aboutContent);
+// });
+
+// lastBtn.addEventListener("click", function() {
+//     handleContentDisplay(contactContent);
+// });
+
+function handleContentDisplay(...activeContents) {
     const contentsPortrait = [mainContent, galleryContent, difContent, contactContent, shopContent, aboutContent];
     const buttonsPortrait = [homeButton, galleryButton, shopButton, aboutButton, contactButton];
 
@@ -530,19 +567,21 @@ function handleContentDisplay(activeContent) {
     contentsPortrait.forEach(content => content.style.display = "none");
     buttonsPortrait.forEach(button => button.classList.remove("on-point"));
 
-    // Show the active content and add 'on-point' class to the corresponding button
-    activeContent.style.display = "block";
-    const activeButton = buttonsPortrait.find(button => button.classList.contains(activeContent.className));
-    if (activeButton) {
-        activeButton.classList.add("on-point");
-    }
+    // Show the active contents and add 'on-point' class to the corresponding button(s)
+    activeContents.forEach(activeContent => {
+        activeContent.style.display = "block";
+        const activeButton = buttonsPortrait.find(button => button.classList.contains(activeContent.className));
+        if (activeButton) {
+            activeButton.classList.add("on-point");
+        }
+    });
 }
-
-// Event listeners for buttons
+// Home button should display both mainContent and difContent
 homeBtn.addEventListener("click", function() {
-    handleContentDisplay(mainContent);
+    handleContentDisplay(mainContent, difContent);
 });
 
+// Other buttons display only their respective content
 galleryBtn.addEventListener("click", function() {
     handleContentDisplay(galleryContent);
 });
@@ -562,7 +601,7 @@ lastBtn.addEventListener("click", function() {
 
     /** The short screen navbar  **/
 // Function to show content and highlight buttons
-function showContent(activeContent, activeButton, activeSmall) {
+function showContent(activeContent, activeButton) {
     // Define all content elements
     const contents = [
         mainContent,
@@ -595,22 +634,6 @@ function showContent(activeContent, activeButton, activeSmall) {
     // Add 'on-point' class to the active button
     activeButton.classList.add("on-point");
     
-    
-
-    // Define all button for small screen elements
-    const SmallScreen = [
-      homeBtn,
-      aboutBtn,
-      galleryBtn,
-      shopBtn,
-      contactBtn
-    ]
-
-
-    SmallScreen.forEach(button => button.classList.remove("on-point"));
-
-    // Add 'on-point' class to the active button
-    activeSmall.classList.add("on-point");
 }
 
 // Event listeners
